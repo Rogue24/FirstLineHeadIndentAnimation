@@ -1,11 +1,8 @@
 # FirstLineHeadIndentAnimation
 
-[![CI Status](https://img.shields.io/travis/zhoujianping24@hotmail.com/FirstLineHeadIndentAnimation.svg?style=flat)](https://travis-ci.org/zhoujianping24@hotmail.com/FirstLineHeadIndentAnimation)
-[![Version](https://img.shields.io/cocoapods/v/FirstLineHeadIndentAnimation.svg?style=flat)](https://cocoapods.org/pods/FirstLineHeadIndentAnimation)
-[![License](https://img.shields.io/cocoapods/l/FirstLineHeadIndentAnimation.svg?style=flat)](https://cocoapods.org/pods/FirstLineHeadIndentAnimation)
-[![Platform](https://img.shields.io/cocoapods/p/FirstLineHeadIndentAnimation.svg?style=flat)](https://cocoapods.org/pods/FirstLineHeadIndentAnimation)
+## 使用YYLabel+CADisplayLink实现文本首行缩进的动画效果
 
-## Example
+![effect.gif](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/cover.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

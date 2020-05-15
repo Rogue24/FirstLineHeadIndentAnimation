@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [JPProgressHUD setMaxSupportedWindowLevel:UIWindowLevelAlert];
+    [JPProgressHUD setMinimumDismissTimeInterval:1.3];
     return YES;
 }
 

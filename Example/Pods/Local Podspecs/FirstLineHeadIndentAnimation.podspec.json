@@ -1,0 +1,22 @@
+{
+  "name": "FirstLineHeadIndentAnimation",
+  "version": "0.1.0",
+  "summary": "A short description of FirstLineHeadIndentAnimation.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhoujianping24@hotmail.com/FirstLineHeadIndentAnimation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhoujianping24@hotmail.com": "zhoujianping24@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/zhoujianping24@hotmail.com/FirstLineHeadIndentAnimation.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FirstLineHeadIndentAnimation/Classes/**/*"
+}

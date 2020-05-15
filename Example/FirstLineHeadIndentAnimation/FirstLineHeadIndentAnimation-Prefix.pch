@@ -13,4 +13,21 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry/Masonry.h>
+#import "JPSolveTool.h"
+#import "JPMacro.h"
+#import "UIView+JPExtension.h"
+#import "UIView+JPPOP.h"
+#import "UIColor+JPExtension.h"
+#import "JPProgressHUD.h"
+#import "JPFileTool.h"
+#import "UIViewController+JPExtension.h"
+#import "UIImage+JPExtension.h"
+#import "NSObject+JPExtension.h"
+#import "NSString+JPExtension.h"
+#import "JPProxy.h"
+#import "MJExtension.h"
+
 #endif
