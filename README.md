@@ -2,25 +2,21 @@
 
 ## 使用YYLabel+CADisplayLink实现文本首行缩进的动画效果
 
-![effect.gif](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/cover.gif)
+实现原理：[使用YYLabel+CADisplayLink实现文本首行缩进的动画效果](https://www.jianshu.com/p/3d8cc8b45965)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+> 这是从项目抽取出来的小模块，体量可能有点大，另外数据是从json文件提取的（服务器返回的字段名称有点奇葩），使用的是MVVM开发模式，仅供参考。
 
-## Requirements
+**1. 控制器通过``WTVPUGCProfileCellModel``这个ViewModel触发效果（更新状态、调用动画）：**
+![](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/explain1.jpg)
 
-## Installation
+**2. 动画代码在``WTVPUGCProfilePlayView.m``里面实现：**
+![](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/explain2.jpg)
 
-FirstLineHeadIndentAnimation is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+**3. 点击头像更改直播状态（单个），点击关注按钮更改关注状态（全局）**
 
-```ruby
-pod 'FirstLineHeadIndentAnimation'
-```
+![实现效果](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/cover.gif)
 
-## Author
+## 反馈地址
 
-zhoujianping24@hotmail.com, zhoujianping24@hotmail.com
-
-## License
-
-FirstLineHeadIndentAnimation is available under the MIT license. See the LICENSE file for more info.
+    扣扣：184669029
+    博客：https://www.jianshu.com/u/2edfbadd451c
