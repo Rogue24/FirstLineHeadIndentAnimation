@@ -1,6 +1,0 @@
-framework module FirstLineHeadIndentAnimation {
-  umbrella header "FirstLineHeadIndentAnimation-umbrella.h"
-
-  export *
-  module * { export * }
-}

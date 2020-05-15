@@ -140,7 +140,7 @@
                 [self.jvhua stopAnimating];
                 if (isChangeImage) {
                     UIImage *image = [UIImage imageNamed:imageName];
-                    CGFloat h = _imageHeight;
+                    CGFloat h = self->_imageHeight;
                     CGFloat w = image ? (h * image.size.width / image.size.height) : h;
                     [self.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
                         make.size.equalTo(@(CGSizeMake(w, h)));
@@ -194,7 +194,7 @@
         self.alpha = 1;
         if (isChangeImage) {
             UIImage *image = [UIImage imageNamed:imageName];
-            CGFloat h = _imageHeight;
+            CGFloat h = self->_imageHeight;
             CGFloat w = image ? (h * image.size.width / image.size.height) : h;
             [self.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.size.equalTo(@(CGSizeMake(w, h)));

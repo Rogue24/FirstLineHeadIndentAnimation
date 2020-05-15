@@ -223,8 +223,8 @@
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:cellModel.index inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
     } completion:^(BOOL finished) {
         if (finished) {
-            if (_isAnimating && complete) complete();
-            _isAnimating = NO;
+            if (self->_isAnimating && complete) complete();
+            self->_isAnimating = NO;
         }
     }];
 }

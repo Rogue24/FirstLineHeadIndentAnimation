@@ -1,5 +1,4 @@
 PODS:
-  - FirstLineHeadIndentAnimation (0.1.0)
   - JPBasic (0.1.2):
     - JPBasic/JPCategory (= 0.1.2)
     - JPBasic/JPConst (= 0.1.2)
@@ -36,7 +35,6 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - FirstLineHeadIndentAnimation (from `../`)
   - JPBasic
   - MJExtension
   - MJRefresh
@@ -55,12 +53,7 @@ SPEC REPOS:
     - YYText
     - YYWebImage
 
-EXTERNAL SOURCES:
-  FirstLineHeadIndentAnimation:
-    :path: "../"
-
 SPEC CHECKSUMS:
-  FirstLineHeadIndentAnimation: 3958bc7beb4ff91c68ec3777974eeb4899488901
   JPBasic: 0e9c125855ec33ad4d0787bfd19725d36d967115
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
@@ -72,6 +65,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 8ffec574f2b5a145c34f631fa78d4c197bf5d5e0
+PODFILE CHECKSUM: ba3c8b527317a40288e3df67ff5aae7a2d928561
 
 COCOAPODS: 1.9.1

@@ -27,6 +27,7 @@
 		1A94E9CE246E8B9500E04D31 /* UIImageView+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A94E9C4246E8B9500E04D31 /* UIImageView+JPExtension.m */; };
 		1A94E9CF246E8B9500E04D31 /* YYWebImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A94E9C7246E8B9500E04D31 /* YYWebImageHelper.m */; };
 		1A94E9D0246E8B9500E04D31 /* JPRoundImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A94E9CA246E8B9500E04D31 /* JPRoundImageManager.m */; };
+		1A94E9D3246E91BA00E04D31 /* UIApplication+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A94E9D2246E91BA00E04D31 /* UIApplication+JPExtension.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -93,6 +94,8 @@
 		1A94E9C8246E8B9500E04D31 /* JPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageView.h; sourceTree = "<group>"; };
 		1A94E9C9246E8B9500E04D31 /* JPWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPWebImageManager.h; sourceTree = "<group>"; };
 		1A94E9CA246E8B9500E04D31 /* JPRoundImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRoundImageManager.m; sourceTree = "<group>"; };
+		1A94E9D1246E91BA00E04D31 /* UIApplication+JPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JPExtension.h"; sourceTree = "<group>"; };
+		1A94E9D2246E91BA00E04D31 /* UIApplication+JPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JPExtension.m"; sourceTree = "<group>"; };
 		3C735CCCD66869A98A0C0E74 /* Pods-FirstLineHeadIndentAnimation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstLineHeadIndentAnimation_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FirstLineHeadIndentAnimation_Tests/Pods-FirstLineHeadIndentAnimation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4562BBAFDD870A2ECCDA71A7 /* FirstLineHeadIndentAnimation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FirstLineHeadIndentAnimation.podspec; path = ../FirstLineHeadIndentAnimation.podspec; sourceTree = "<group>"; };
 		48BABB2CB468BAD48ED34A7B /* Pods-FirstLineHeadIndentAnimation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstLineHeadIndentAnimation_Tests.release.xcconfig"; path = "Target Support Files/Pods-FirstLineHeadIndentAnimation_Tests/Pods-FirstLineHeadIndentAnimation_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				1A94E993246E8A1E00E04D31 /* PUGC */,
 				6003F59C195388D20070C39A /* JPAppDelegate.h */,
 				6003F59D195388D20070C39A /* JPAppDelegate.m */,
+				1A94E9D1246E91BA00E04D31 /* UIApplication+JPExtension.h */,
+				1A94E9D2246E91BA00E04D31 /* UIApplication+JPExtension.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ViewController.h */,
 				6003F5A6195388D20070C39A /* ViewController.m */,
@@ -385,9 +390,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JP;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "zhoujianping24@hotmail.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = AH737FZCJM;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -445,7 +453,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FirstLineHeadIndentAnimation_Example/Pods-FirstLineHeadIndentAnimation_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FirstLineHeadIndentAnimation/FirstLineHeadIndentAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/JPBasic/JPBasic.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -459,7 +466,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirstLineHeadIndentAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPBasic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -540,6 +546,7 @@
 				1A94E9B0246E8A1E00E04D31 /* WTVPUGCProfileCellModel.m in Sources */,
 				1A94E9CB246E8B9500E04D31 /* UIButton+JPExtension.m in Sources */,
 				1A94E9CF246E8B9500E04D31 /* YYWebImageHelper.m in Sources */,
+				1A94E9D3246E91BA00E04D31 /* UIApplication+JPExtension.m in Sources */,
 				1A94E9BB246E8A1E00E04D31 /* WTVPUGCProfileIconView.m in Sources */,
 				1A94E9B9246E8A1E00E04D31 /* WTVPUGCProfileCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -600,23 +607,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -640,22 +661,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -674,6 +709,7 @@
 			baseConfigurationReference = DBDEC5C65CCD634EF6899BAD /* Pods-FirstLineHeadIndentAnimation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstLineHeadIndentAnimation/FirstLineHeadIndentAnimation-Prefix.pch";
 				INFOPLIST_FILE = "FirstLineHeadIndentAnimation/FirstLineHeadIndentAnimation-Info.plist";
@@ -692,6 +728,7 @@
 			baseConfigurationReference = A1C6AF5C0D3DCBE6A9E889BB /* Pods-FirstLineHeadIndentAnimation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstLineHeadIndentAnimation/FirstLineHeadIndentAnimation-Prefix.pch";
 				INFOPLIST_FILE = "FirstLineHeadIndentAnimation/FirstLineHeadIndentAnimation-Info.plist";

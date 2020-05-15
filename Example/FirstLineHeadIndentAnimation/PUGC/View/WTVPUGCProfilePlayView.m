@@ -143,7 +143,6 @@
         CGFloat h = videoTitleY + videoTitleH + videoTitleY;
         UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(x, y, w, h)];
         topView.clipsToBounds = NO;
-//        topView.backgroundColor = JPRandomColor;
         [contentView addSubview:topView];
         self.topView = topView;
         
@@ -153,13 +152,12 @@
         YYLabel *titleLabel = [YYLabel new];
         titleLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
         titleLabel.displaysAsynchronously = YES;
-//        titleLabel.ignoreCommonProperties = YES;
+//        titleLabel.ignoreCommonProperties = YES; // 需要刷新exclusionPaths，这个属性不能为YES
         titleLabel.fadeOnHighlight = NO;
         titleLabel.fadeOnAsynchronouslyDisplay = NO;
         titleLabel.frame = CGRectMake(x, y, w, h);
         titleLabel.clipsToBounds = NO;
         titleLabel.userInteractionEnabled = NO;
-//        titleLabel.backgroundColor = JPRandomColor;
         [topView addSubview:titleLabel];
         self.titleLabel = titleLabel;
         
@@ -206,7 +204,7 @@
     [self removeLink];
 }
 
-#pragma mark - 顶部状态处理
+#pragma mark - 直播、关注状态的动画、标题处理
 
 - (void)setIsFollowed:(BOOL)isFollowed isLiving:(BOOL)isLiving {
     [self removeLink];
@@ -218,10 +216,12 @@
     
     if (isLiving) {
         if (!self.livingView) [self createLivingView];
+        [self addLivingAnim];
         self.livingView.jp_x = 0;
         self.livingView.alpha = 1;
         followedViewX = self.livingView.jp_maxX + _topSubviewSpace;
     } else {
+        [self removeLivingAnim];
         self.livingView.alpha = 0;
     }
     
@@ -340,7 +340,7 @@
             self.followedView.jp_x = followedViewX;
         } completion:^(BOOL finished) {
             [self removeLink];
-            if (!_isLiving) [self removeLivingAnim];
+            if (!self->_isLiving) [self removeLivingAnim];
             [self updateTitleLabelExclusionPaths];
             self.titleLabel.displaysAsynchronously = YES;
         }];
@@ -428,7 +428,7 @@
     }
 }
 
-#pragma mark - 直播中动画
+#pragma mark 直播状态动画
 
 - (void)addLivingAnim {
     if (!_isLiving || self.livingLayers.count != 3) return;
@@ -484,7 +484,7 @@
     [self addLivingAnim];
 }
 
-#pragma mark - 垂直/关联视频处理
+#pragma mark - 竖直、包含关联视频的UI刷新
 
 - (void)createRelateView {
     UIView *relateView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.jp_width, JPScaleValue(62))];
