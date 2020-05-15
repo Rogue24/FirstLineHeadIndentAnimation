@@ -206,33 +206,7 @@
 
 #pragma mark - 直播、关注状态的动画、标题处理
 
-- (void)setIsFollowed:(BOOL)isFollowed isLiving:(BOOL)isLiving {
-    [self removeLink];
-    if (_isFollowed == isFollowed && _isLiving == isLiving) return;
-    _isFollowed = isFollowed;
-    _isLiving = isLiving;
-    
-    CGFloat followedViewX = 0;
-    
-    if (isLiving) {
-        if (!self.livingView) [self createLivingView];
-        [self addLivingAnim];
-        self.livingView.jp_x = 0;
-        self.livingView.alpha = 1;
-        followedViewX = self.livingView.jp_maxX + _topSubviewSpace;
-    } else {
-        [self removeLivingAnim];
-        self.livingView.alpha = 0;
-    }
-    
-    if (isFollowed) {
-        if (!self.followedView) [self createFollowedView];
-        self.followedView.jp_x = followedViewX;
-        self.followedView.alpha = 1;
-    } else {
-        self.followedView.alpha = 0;
-    }
-}
+#pragma mark 标题位置的刷新
 
 - (void)setTitleLayout:(YYTextLayout *)titleLayout {
     [self removeLink];
@@ -260,6 +234,36 @@
         self.titleLabel.exclusionPaths = @[[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, w, 1)]];
     } else {
         self.titleLabel.exclusionPaths = nil;
+    }
+}
+
+#pragma mark 关注、直播状态的更改
+
+- (void)setIsFollowed:(BOOL)isFollowed isLiving:(BOOL)isLiving {
+    [self removeLink];
+    if (_isFollowed == isFollowed && _isLiving == isLiving) return;
+    _isFollowed = isFollowed;
+    _isLiving = isLiving;
+    
+    CGFloat followedViewX = 0;
+    
+    if (isLiving) {
+        if (!self.livingView) [self createLivingView];
+        [self addLivingAnim];
+        self.livingView.jp_x = 0;
+        self.livingView.alpha = 1;
+        followedViewX = self.livingView.jp_maxX + _topSubviewSpace;
+    } else {
+        [self removeLivingAnim];
+        self.livingView.alpha = 0;
+    }
+    
+    if (isFollowed) {
+        if (!self.followedView) [self createFollowedView];
+        self.followedView.jp_x = followedViewX;
+        self.followedView.alpha = 1;
+    } else {
+        self.followedView.alpha = 0;
     }
 }
 
@@ -356,6 +360,8 @@
 - (BOOL)isLiving {
     return _isLiving;
 }
+
+#pragma mark 创建关注、直播图标
 
 - (void)createFollowedView {
     UIView *followedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, JPScaleValue(48), self.class.topSubviewHeight)];
@@ -599,6 +605,8 @@
 //    }
 //    return nil;
 //}
+
+#pragma mark - 点击判定
 
 - (BOOL)isPlayerTouching:(CGPoint)point {
     if ( (!self.bottomView.hidden && CGRectContainsPoint(self.bottomView.frame, point)) ||
