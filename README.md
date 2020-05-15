@@ -1,6 +1,4 @@
-# FirstLineHeadIndentAnimation
-
-## 使用YYLabel+CADisplayLink实现文本首行缩进的动画效果
+# 使用YYLabel+CADisplayLink实现文本首行缩进的动画效果
 
 实现原理：[使用YYLabel+CADisplayLink实现文本首行缩进的动画效果](https://www.jianshu.com/p/3d8cc8b45965)
 
