@@ -6,15 +6,15 @@
 
 **1. ``WTVPUGCProfileCellModel``，ViewModel，负责UI布局属性的存储和计算，另外由控制器调用其API改变状态（更新、调用动画）：**
 
-![explain1](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/explain1.jpg)
+![explain1](https://github.com/Rogue24/FirstLineHeadIndentAnimation/tree/master/Cover/explain1.jpg)
 
 **2. UI布局、动画代码都在``WTVPUGCProfilePlayView.m``里面实现：**
 
-![explain2](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/explain2.jpg)
+![explain2](https://github.com/Rogue24/FirstLineHeadIndentAnimation/tree/master/Cover/explain2.jpg)
 
 **3. 点击头像更改直播状态（单个），点击关注按钮更改关注状态（全局）**
 
-![实现效果](https://github.com/Rogue24/FirstLineHeadIndentAnimation/raw/master/Cover/cover.gif)
+![实现效果](https://github.com/Rogue24/FirstLineHeadIndentAnimation/tree/master/Cover/cover.gif)
 
 ## 反馈地址
 
